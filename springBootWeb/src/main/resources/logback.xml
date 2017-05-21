@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration scan="true" scanPeriod="1 seconds">
+    <contexListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contexListener>
+    <jmxConfigurator/>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <patten>logbak: %d{HH:mm:ss.SSS} %logger{36} - %msg%n</patten>
+        </encoder>
+    </appender>
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <root level="info">
+        <appender ref="console"/>
+    </root>
+</configuration>
+
